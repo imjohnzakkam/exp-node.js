@@ -1,15 +1,13 @@
+import React from 'react';
 
-     class HelloMessage extends React.Component {
-  render() {
-    return (
-      <div>
-        Hello {this.props.name}
-      </div>
-    );
-  }
-}
+const person  = props => {
+     return(
+          <div>
+               <p> 
+                    I am {props}.
+               </p> 
+          </div>
+          );
+};
 
-ReactDOM.render(
-  <HelloMessage name="John Zakkam" />,
-  document.getElementById('hello-example')
-);
+export default person;
