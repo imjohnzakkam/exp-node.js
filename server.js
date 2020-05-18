@@ -1,15 +1,9 @@
 const express = require('express');
-
+const bodyParser = require('body-parser');
 const app = express();
 
-app.use('/add-product', (req, res, next) => {
-	console.log('In another middleware!');
-	res.send('<h1>Hello from add-product</h1>');
-});
+app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/', (req, res, next) => {
-	console.log('In another middleware!');
-	res.send('<h1>Hello from middleware</h1>');
-});
+
 
 app.listen(3000); 
